@@ -13,6 +13,8 @@ const initialize = async () => {
     socket.on("signalinMessage" , handleSingalingMessage) ;
     local = await navigator.mediaDevices.getUserMedia({video:true,audio:true});
     //This is asking camera and video permissions for local user
+    document.querySelector("#localVideo").srcObject = local; // Set local stream to localVideo element
+    document.querySelector("#localVideo").classList.add('smallFrame'); // Apply smallFrame class
     initiateOffer()
 }
 
