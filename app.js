@@ -4,6 +4,7 @@ const http = require('http')
 const server = http.createServer(app);
 const io = require('socket.io')(server);
 const path = require('path');
+import('dotenv').config();
 
 app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, 'public')));
@@ -20,4 +21,4 @@ app.get('/', (req, res) => {
     res.render('stream');
 })
 
-server.listen(3000, () => {console.log("Server is running on port 3000")});
+server.listen(process.env.PORT);
