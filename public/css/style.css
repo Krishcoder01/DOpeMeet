@@ -19,6 +19,28 @@ html ,body {
     align-items: center;
     justify-content: space-between;
 }
+@media (max-width: 768px){
+    #videos{
+        width: 100%;
+        /* background-color: red; */
+        height : 70vh ;
+        /* background-color: red; */
+        padding: 3vh 0;  
+        flex-direction: column;
+        
+    } 
+
+    #remoteVideo{
+        width: 94%;
+        height: 80% ;
+    
+    } 
+
+    #localVideo{
+       
+        width: 96%;
+    }
+}
 #controls{
     height: 20vh;
     display: flex;
